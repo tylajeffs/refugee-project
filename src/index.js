@@ -1,27 +1,27 @@
-import React from 'react';
-import { render } from 'react-dom';
-import Highcharts from 'highcharts';
-import HighchartsReact from 'highcharts-react-official';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const options = {
-    chart: {
-      type: 'spline'
-    },
-    title: {
-      text: 'My chart'
-    },
-    series: [
-      {
-        data: [1, 2, 1, 4, 3, 6]
-      }
-    ]
-  };
+import Highcharts from "highcharts";
+import HighchartsSankey from "highcharts/modules/sankey";
+import HighchartsReact from "highcharts-react-official";
+
+import data from "./data/sankey";
+import "./styles.css";
+
+HighchartsSankey(Highcharts);
 
 
-  const App = () => (
-    <div>
-      <HighchartsReact highcharts={Highcharts} options={options} />
+function App() {
+  return (
+    <div className="App">
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={data}
+        // constructorType="sankyChart"
+      />
     </div>
   );
+}
 
-  render(<App />, document.getElementById('root'));  
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
