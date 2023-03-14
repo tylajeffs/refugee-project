@@ -5,7 +5,7 @@ import Highcharts from "highcharts";
 import HighchartsSankey from "highcharts/modules/sankey";
 import HighchartsReact from "highcharts-react-official";
 
-import data from "./data/sankey";
+import data from "./data/asylumSankey";
 import "./styles.css";
 
 HighchartsSankey(Highcharts);
