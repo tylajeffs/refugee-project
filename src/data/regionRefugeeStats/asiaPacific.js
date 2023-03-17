@@ -1026,6 +1026,7 @@ module.exports = {
             ["Samoa","United States of America",5  ]
           ],
         type: "sankey",
+        height: 900,
         name: "Other People in Need of International Protection Statistics"
       }
     ]
