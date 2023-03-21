@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import Highcharts from "highcharts";
 import HighchartsSankey from "highcharts/modules/sankey";
 import HighchartsReact from "highcharts-react-official";

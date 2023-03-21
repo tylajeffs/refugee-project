@@ -1,53 +1,39 @@
-import Highcharts from 'highcharts';
-import HighchartsReact from 'highcharts-react-official';
-import _ from 'lodash';
-import HighchartsExporting from 'highcharts/modules/exporting';
-import HighchartsAccessibility from 'highcharts/modules/accessibility';
-import HighchartsSankey from 'highcharts/modules/sankey';
-import HighchartsDependencyWheel from 'highcharts/modules/dependency-wheel';
-HighchartsExporting(Highcharts);
-HighchartsAccessibility(Highcharts);
-HighchartsSankey(Highcharts);
-HighchartsDependencyWheel(Highcharts);
+import React from "react";
+import { render } from "react-dom";
+// Import Highcharts
+import Highcharts from "highcharts";
+import HighchartSankey from "highcharts/modules/sankey";
+import HighchartsWheel from "highcharts/modules/dependency-wheel";
+import HighchartsReact from "highcharts-react-official";
 
-const getOptions = (type) => ({
-  chart: {
-    type,
-    width: 800,
-    height: 600,
-  },
-  title: {
-    text: _.startCase(`${type} chart`),
-  },
-  series: [
-    {
-      keys: ['from', 'to', 'weight'],
-      dataLabels: {
-        format: '{point.fromNode.name} → {point.toNode.name}: {point.weight}',
-        nodeFormat: '{point.name}',
-        color: 'black',
-      },
-      data: [
-        ['A', 'B', 1],
-        ['A', 'C', 1],
-        ['A', 'D', 2],
-        ['B', 'C', 2],
-        ['C', 'D', 1],
-        ['E', 'D', 3],
-        ['E', 'F', 1],
-      ],
-    },
-  ],
-  credits: {
-    enabled: false,
-  },
-});
+HighchartSankey(Highcharts);
+HighchartsWheel(Highcharts);
 
-function App() {
+const Viz = () => {
   return (
-    <HighchartsReact highcharts={Highcharts} options={getOptions('dependencywheel')}
+    <HighchartsReact
+      highcharts={Highcharts}
+      options={{
+        series: [
+          {
+            type: "dependencywheel",
+            data: [
+              {
+                from: "Category1",
+                to: "Category2",
+                weight: 2
+              },
+              {
+                from: "Category1",
+                to: "Category3",
+                weight: 5
+              }
+            ]
+          }
+        ]
+      }}
     />
   );
-}
+};
 
-export default App;
+render(<Viz />, document.getElementById("root"));
