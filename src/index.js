@@ -5,6 +5,7 @@ import Highcharts from "highcharts";
 import HighchartSankey from "highcharts/modules/sankey";
 import HighchartsWheel from "highcharts/modules/dependency-wheel";
 import HighchartsReact from "highcharts-react-official";
+import data from "./data/dependencyWheel/ap-to-ap"
 
 HighchartSankey(Highcharts);
 HighchartsWheel(Highcharts);
@@ -12,27 +13,12 @@ HighchartsWheel(Highcharts);
 const Viz = () => {
   return (
     <HighchartsReact
-      highcharts={Highcharts}
-      options={{
-        series: [
-          {
-            type: "dependencywheel",
-            data: [
-              {
-                from: "Category1",
-                to: "Category2",
-                weight: 2
-              },
-              {
-                from: "Category1",
-                to: "Category3",
-                weight: 5
-              }
-            ]
-          }
-        ]
-      }}
-    />
+        highcharts={Highcharts}
+        options={data}
+        // constructorType="dependencywheel"
+      />
+          
+    
   );
 };
 
