@@ -1,25 +1,23 @@
-import React from "react";
-import { render } from "react-dom";
-// Import Highcharts
-import Highcharts from "highcharts";
-import HighchartSankey from "highcharts/modules/sankey";
-import HighchartsWheel from "highcharts/modules/dependency-wheel";
-import HighchartsReact from "highcharts-react-official";
-import data from "./data/dependencyWheel/afghanistan/afghanistan"
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import DependencyWheelPage from "./pages/dependencyWheel/dependencyWheel";
+import SankeyDiagramPage from "./pages/sankeyDiagram/sankeyDiagram";
 
-HighchartSankey(Highcharts);
-HighchartsWheel(Highcharts);
 
-const Viz = () => {
+export default function App() {
   return (
-    <HighchartsReact
-        highcharts={Highcharts}
-        options={data}
-        // constructorType="dependencywheel"
-      />
-          
-    
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="dependency" element={<DependencyWheelPage />} />
+          <Route path="sankey" element={<SankeyDiagramPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
-};
+}
 
-render(<Viz />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
