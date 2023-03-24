@@ -14,6 +14,9 @@ function Navbar() {
         <li>
           <Link to="/ap-to-ap">Asia Pacific to Asia Pacific</Link>
         </li>
+        <li>
+          <Link to="/ap-to-sa">Asia Pacific to Southern Africa</Link>
+        </li>
       </ul>
     </nav>
   );
