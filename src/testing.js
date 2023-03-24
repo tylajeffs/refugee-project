@@ -5,7 +5,7 @@ import Highcharts from "highcharts";
 import HighchartSankey from "highcharts/modules/sankey";
 import HighchartsWheel from "highcharts/modules/dependency-wheel";
 import HighchartsReact from "highcharts-react-official";
-import data from "./data/dependencyWheel/ap-to-ap"
+import data from "./data/dependencyWheel/regions/ap-to-ap"
 
 HighchartSankey(Highcharts);
 HighchartsWheel(Highcharts);
