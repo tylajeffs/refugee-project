@@ -20,6 +20,15 @@ function Navbar() {
         <li>
           <Link to="/ap-to-am">Asia Pacific to the Americas</Link>
         </li>
+        <li>
+          <Link to="/ap-to-wca">Asia Pacific to West and Central Africa</Link>
+        </li>
+        <li>
+          <Link to="/ap-to-me-and-na">Asia Pacific to Middle East and North Africa</Link>
+        </li>
+        <li>
+          <Link to="/ap-to-e-ha">Asia Pacific to East and Horn of Africa</Link>
+        </li>
       </ul>
     </nav>
   );
