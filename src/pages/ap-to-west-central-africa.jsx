@@ -33,7 +33,6 @@ const App = () => {
         {
             keys: ["from", "to", "weight"],
             data: [
-                ["Afghanistan","Nigeria",5  ],
                 ["Cambodia","Cote d'Ivoire",8  ],
                 ["Iran (Islamic Rep. of)","Chad",5  ],
                 ["Iran (Islamic Rep. of)","Cameroon",5  ],
