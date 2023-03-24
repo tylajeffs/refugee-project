@@ -25,7 +25,7 @@ const App = () => {
   //chart settings
   const options = {
     title: {
-      text: "Asia Pacific to East and Horn of Africa"
+      text: "Asia Pacific to Each Region"
     },
     chart: {
       type
@@ -34,16 +34,15 @@ const App = () => {
         {
             keys: ["from", "to", "weight"],
             data: [
-                ["Afghanistan","Kenya",12  ],
-                ["Bangladesh","Somalia",6  ],
-                ["Iran (Islamic Rep. of)","United Rep. of Tanzania",5  ],
-                ["Iran (Islamic Rep. of)","Uganda",5  ],
-                ["Sri Lanka","Kenya",9  ],
-                ["Pakistan","Burundi",9  ],
-                ["Pakistan","Kenya",9  ],
-                ["Pakistan","Uganda",227  ]
+                ["Asia Pacific","Asia  Pacific",4088444  ],
+                ["Asia Pacific","Europe",672925  ],
+                ["Asia Pacific","West and Central Africa",145  ],
+                ["Asia Pacific","The Americas",139082  ],
+                ["Asia Pacific","Southern Africa",362  ],
+                ["Asia Pacific","Middle East and North Africa",5787  ],
+                ["Asia Pacific","East and Horn of Africa",282  ]
               ],
-            name: "Asia Pacific to East and Horn of Africa"
+            name: "Asia Pacific to Each Region"
           }
     ]
   };

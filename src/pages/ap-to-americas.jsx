@@ -3,6 +3,7 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import HighchartsSankey from "highcharts/modules/sankey";
 import HighchartsWheel from "highcharts/modules/dependency-wheel";
+import "../css/styles.css";
 
 HighchartsSankey(Highcharts);
 HighchartsWheel(Highcharts);
@@ -158,7 +159,7 @@ const App = () => {
   //what will actually be displayed
   return (
     <div>
-      <button onClick={() => handleTypeChange(type)}>
+      <button className="button" onClick={() => handleTypeChange(type)}>
         Change Type To {type === "sankey" ? "dependencywheel" : "sankey"}
       </button>
       <HighchartsReact highcharts={Highcharts} options={options} />

@@ -9,6 +9,8 @@ import APtoAM from "./pages/ap-to-americas";
 import APtoWCA from "./pages/ap-to-west-central-africa";
 import APtoEHA from "./pages/ap-to-e-horna";
 import APtoMENA from "./pages/ap-to-me-na";
+import APtoER from "./pages/ap-to-each-region";
+
 
 
 export default function App() {
@@ -24,8 +26,7 @@ export default function App() {
           <Route path="ap-to-wca" element={<APtoWCA />} />
           <Route path="ap-to-e-ha" element={<APtoEHA />} />
           <Route path="ap-to-me-and-na" element={<APtoMENA />} />
-
-
+          <Route path="ap-to-region" element={<APtoER />} />
 
         </Route>
       </Routes>
