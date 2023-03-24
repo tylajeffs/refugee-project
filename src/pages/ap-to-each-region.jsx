@@ -13,6 +13,9 @@ const App = () => {
   //set the chart type to start out as sankey  
   const [type, setType] = useState("sankey");
 
+  //set total amount of refugees 
+  const total = "4,907,027";
+
   //handle button click to change chart type
   const handleTypeChange = (type) => {
     if (type === "sankey") {
@@ -54,6 +57,10 @@ const App = () => {
         Change Type To {type === "sankey" ? "dependencywheel" : "sankey"}
       </button>
       <HighchartsReact highcharts={Highcharts} options={options} />
+
+      <div className="total">
+        <button >Total: {total}</button>
+      </div>
     </div>
   );
 };

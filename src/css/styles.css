@@ -24,3 +24,20 @@
   .button:hover {
     transform: scale(1.1);
   }
+
+  .total {
+    text-align: center;
+  }
+
+  .total button{
+    text-align: center;
+    font-size: 20px;
+    background-color: #F1E8AD;
+    border: none;
+    border-radius: 5px;
+    margin-top:20px
+   
+  }
+
+
+  
