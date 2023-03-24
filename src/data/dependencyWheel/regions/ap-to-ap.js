@@ -1,6 +1,6 @@
 module.exports = {
     title: {
-      text: ""
+      text: "Asia Pacific to Asia Pacific"
     },
     series: [
       {
@@ -359,7 +359,6 @@ module.exports = {
           ["Uzbekistan","Rep. of Korea",9  ],
           ["Samoa","Australia",7  ]
         ],
-        type: "dependencywheel",
         name: "Asia Pacific to Asia Pacific"
       }
     ]

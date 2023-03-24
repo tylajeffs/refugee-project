@@ -9,10 +9,13 @@ function Navbar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/dependency">Dependency Wheel</Link>
+          <Link to="/ap-to-europe">Asia Pacific to Europe</Link>
         </li>
         <li>
-          <Link to="/sankey">Sankey Diagram</Link>
+          <Link to="/ap-to-ap">Asia Pacific to Asia Pacific</Link>
+        </li>
+        <li>
+          <Link to="/change">Chart Change attempt</Link>
         </li>
       </ul>
     </nav>
