@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import DependencyWheelPage from "./pages/dependencyWheel/dependencyWheel";
-import SankeyDiagramPage from "./pages/sankeyDiagram/sankeyDiagram";
+import SankeyDiagramPage from "./pages/sankeyDiagram";
 
 
 export default function App() {
