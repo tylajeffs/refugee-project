@@ -1,25 +1,26 @@
 import React from "react";
-import { render } from "react-dom";
-// Import Highcharts
+import ReactDOM from "react-dom";
 import Highcharts from "highcharts";
-import HighchartSankey from "highcharts/modules/sankey";
-import HighchartsWheel from "highcharts/modules/dependency-wheel";
+import HighchartsSankey from "highcharts/modules/sankey";
 import HighchartsReact from "highcharts-react-official";
-import data from "./data/dependencyWheel/ap-to-ap"
 
-HighchartSankey(Highcharts);
-HighchartsWheel(Highcharts);
+import data from "./data/sankey/worldRefugeeStats/refugeeSankey";
+import "./styles.css";
 
-const Viz = () => {
+HighchartsSankey(Highcharts);
+
+
+function App() {
   return (
-    <HighchartsReact
+    <div className="App">
+      <HighchartsReact
         highcharts={Highcharts}
         options={data}
-        // constructorType="dependencywheel"
+        // constructorType="sankyChart"
       />
-          
-    
+    </div>
   );
-};
+}
 
-render(<Viz />, document.getElementById("root"));
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
