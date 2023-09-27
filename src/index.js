@@ -17,8 +17,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+        
+          <Route exact path="/" element={<Home />} />
           <Route path="ap-to-ap" element={<APtoAP />} />
           <Route path="ap-to-europe" element={<APtoEU />} />
           <Route path="ap-to-sa" element={<APtoSA />} />
@@ -28,9 +28,11 @@ export default function App() {
           <Route path="ap-to-me-and-na" element={<APtoMENA />} />
           <Route path="ap-to-region" element={<APtoER />} />
 
-        </Route>
       </Routes>
     </BrowserRouter>
+
+
+
   );
 }
 
